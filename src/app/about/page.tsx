@@ -5,7 +5,7 @@ export default function AboutPage() {
 
       <div className="mt-8 space-y-5 text-base leading-relaxed text-ink/70">
         <p>
-          I&apos;m Tucker Ratcliff, a Senior Product Manager based in Alexandria, VA.
+          I&apos;m Tucker Glotzbach, a Senior Product Manager based in Alexandria, VA.
           I specialize in payments infrastructure, embedded finance, and AI-native
           products.
         </p>
@@ -19,7 +19,7 @@ export default function AboutPage() {
         </p>
 
         <p>
-          Today, I&apos;m the CEO and founder of Ratcliff RE, an AI-powered real
+          Today, I&apos;m the CEO and founder of Glotzbach RE, an AI-powered real
           estate investment analysis platform. I&apos;m also an active builder of
           AI automation systems using Claude, designing multi-agent workflows
           that turn complex operations into repeatable processes.
@@ -49,7 +49,7 @@ export default function AboutPage() {
 
       <div className="flex gap-6 text-sm">
         <a
-          href="https://linkedin.com/in/tuckerratcliff"
+          href="https://linkedin.com/in/tuckerglotzbach"
           target="_blank"
           rel="noopener noreferrer"
           className="text-ink/50 transition-colors hover:text-accent"
@@ -57,7 +57,7 @@ export default function AboutPage() {
           LinkedIn
         </a>
         <a
-          href="mailto:hello@tuckerratcliff.com"
+          href="mailto:hello@tuckerglotzbach.com"
           className="text-ink/50 transition-colors hover:text-accent"
         >
           Email

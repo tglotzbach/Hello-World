@@ -48,3 +48,21 @@ export function getAutomations(): (AutomationFrontmatter & {
     return { ...(data as AutomationFrontmatter), content };
   });
 }
+
+export interface WritingFrontmatter {
+  title: string;
+  url: string;
+  publication: string;
+  date: string;
+  slug: string;
+}
+
+export function getWriting(): WritingFrontmatter[] {
+  const dir = path.join(contentDir, "writing");
+  const files = fs.readdirSync(dir).filter((f) => f.endsWith(".mdx"));
+  return files.map((file) => {
+    const raw = fs.readFileSync(path.join(dir, file), "utf-8");
+    const { data } = matter(raw);
+    return data as WritingFrontmatter;
+  });
+}

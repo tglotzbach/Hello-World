@@ -12,7 +12,7 @@ export default function Home() {
       {/* Hero */}
       <section className="mx-auto max-w-5xl px-6 pb-16 pt-20 md:pt-28">
         <h1 className="font-serif text-5xl font-bold tracking-tight md:text-6xl">
-          Tucker Ratcliff
+          Tucker Glotzbach
         </h1>
         <p className="mt-4 text-lg text-ink/60">
           Senior Product Manager

@@ -1,25 +1,8 @@
-const articles = [
-  {
-    title: "Placeholder: The Future of Embedded Finance",
-    url: "#",
-    publication: "LinkedIn",
-    date: "2025",
-  },
-  {
-    title: "Placeholder: What Product Managers Get Wrong About AI",
-    url: "#",
-    publication: "LinkedIn",
-    date: "2025",
-  },
-  {
-    title: "Placeholder: Building in Public — Lessons from Founding a Proptech Startup",
-    url: "#",
-    publication: "LinkedIn",
-    date: "2024",
-  },
-];
+import { getWriting } from "@/lib/mdx";
 
 export default function WritingPage() {
+  const articles = getWriting();
+
   return (
     <section className="mx-auto max-w-3xl px-6 py-16">
       <h1 className="font-serif text-4xl font-bold tracking-tight">Writing</h1>
@@ -30,14 +13,14 @@ export default function WritingPage() {
       <div className="mt-10 space-y-1">
         {articles.map((article) => (
           <a
-            key={article.title}
+            key={article.slug}
             href={article.url}
             target="_blank"
             rel="noopener noreferrer"
             className="group flex items-baseline justify-between gap-4 py-5"
           >
             <div>
-              <h2 className="font-serif text-lg font-semibold tracking-tight group-hover:text-accent transition-colors">
+              <h2 className="font-serif text-lg font-semibold tracking-tight transition-colors group-hover:text-accent">
                 {article.title}
               </h2>
               <p className="mt-1 text-sm text-ink/40">
@@ -55,7 +38,7 @@ export default function WritingPage() {
       <p className="mt-6 text-sm text-ink/40">
         More articles on{" "}
         <a
-          href="https://linkedin.com/in/tuckerratcliff"
+          href="https://linkedin.com/in/tuckerglotzbach"
           target="_blank"
           rel="noopener noreferrer"
           className="text-accent hover:underline"

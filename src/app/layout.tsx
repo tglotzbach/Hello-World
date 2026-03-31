@@ -4,7 +4,7 @@ import { Footer } from "@/components/Footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Tucker Ratcliff — Product Manager",
+  title: "Tucker Glotzbach — Product Manager",
   description:
     "Senior Product Manager specializing in payments infrastructure, embedded finance, and AI-native products.",
 };
@@ -15,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
