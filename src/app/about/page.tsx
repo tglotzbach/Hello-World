@@ -19,7 +19,7 @@ export default function AboutPage() {
         </p>
 
         <p>
-          Today, I&apos;m the CEO and founder of Glotzbach RE, an AI-powered real
+          Today, I&apos;m the CEO and founder of Ratcliff RE, an AI-powered real
           estate investment analysis platform. I&apos;m also an active builder of
           AI automation systems using Claude, designing multi-agent workflows
           that turn complex operations into repeatable processes.
