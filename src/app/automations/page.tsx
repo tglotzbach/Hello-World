@@ -1,5 +1,15 @@
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { getAutomations } from "@/lib/mdx";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Automations — Tucker Glotzbach",
+  description: "AI tools and workflows — from multi-agent systems to data pipelines powered by Claude.",
+  openGraph: {
+    title: "Automations — Tucker Glotzbach",
+    description: "AI tools and workflows — from multi-agent systems to data pipelines powered by Claude.",
+  },
+};
 
 export default function AutomationsPage() {
   const automations = getAutomations();

@@ -1,3 +1,16 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About — Tucker Glotzbach",
+  description:
+    "Senior Product Manager specializing in payments infrastructure, embedded finance, and AI-native products. Based in Alexandria, VA.",
+  openGraph: {
+    title: "About — Tucker Glotzbach",
+    description:
+      "Senior Product Manager specializing in payments infrastructure, embedded finance, and AI-native products.",
+  },
+};
+
 export default function AboutPage() {
   return (
     <section className="mx-auto max-w-3xl px-6 py-16">
@@ -63,7 +76,8 @@ export default function AboutPage() {
           Email
         </a>
         <a
-          href="#"
+          href="/tucker-glotzbach-resume.pdf"
+          download
           className="text-ink/50 transition-colors hover:text-accent"
         >
           Resume

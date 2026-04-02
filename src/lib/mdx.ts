@@ -11,6 +11,8 @@ export interface ProjectFrontmatter {
   category: string;
   summary: string;
   slug: string;
+  order: number;
+  gradient: string;
 }
 
 export interface AutomationFrontmatter {
@@ -23,11 +25,12 @@ export interface AutomationFrontmatter {
 export function getProjects(): (ProjectFrontmatter & { content: string })[] {
   const dir = path.join(contentDir, "projects");
   const files = fs.readdirSync(dir).filter((f) => f.endsWith(".mdx"));
-  return files.map((file) => {
+  const projects = files.map((file) => {
     const raw = fs.readFileSync(path.join(dir, file), "utf-8");
     const { data, content } = matter(raw);
     return { ...(data as ProjectFrontmatter), content };
   });
+  return projects.sort((a, b) => (a.order ?? 99) - (b.order ?? 99));
 }
 
 export function getProjectBySlug(
@@ -35,6 +38,17 @@ export function getProjectBySlug(
 ): (ProjectFrontmatter & { content: string }) | null {
   const projects = getProjects();
   return projects.find((p) => p.slug === slug) ?? null;
+}
+
+export function getCategories(): string[] {
+  const projects = getProjects();
+  const cats = new Set<string>();
+  for (const p of projects) {
+    for (const c of p.category.split(" · ")) {
+      cats.add(c.trim());
+    }
+  }
+  return Array.from(cats).sort();
 }
 
 export function getAutomations(): (AutomationFrontmatter & {

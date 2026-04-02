@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getProjects, getAutomations } from "@/lib/mdx";
 import { ProjectCard } from "@/components/ProjectCard";
 import { AutomationCard } from "@/components/AutomationCard";
+import { ContactForm } from "@/components/ContactForm";
 
 export default function Home() {
   const projects = getProjects();
@@ -31,7 +32,8 @@ export default function Home() {
             View My Work
           </Link>
           <a
-            href="#"
+            href="/tucker-glotzbach-resume.pdf"
+            download
             className="border border-ink/20 px-5 py-2.5 text-sm font-medium text-ink transition-colors hover:border-ink/40"
           >
             Download Resume
@@ -54,6 +56,7 @@ export default function Home() {
                 category={project.category}
                 summary={project.summary}
                 slug={project.slug}
+                gradient={project.gradient}
               />
               <hr className="border-ink/5" />
             </div>
@@ -89,6 +92,21 @@ export default function Home() {
           >
             View all automations &rarr;
           </Link>
+        </div>
+      </section>
+
+      <hr className="mx-auto max-w-5xl border-ink/10" />
+
+      {/* Contact */}
+      <section id="contact" className="mx-auto max-w-2xl px-6 py-16">
+        <h2 className="font-serif text-3xl font-semibold tracking-tight">
+          Get in Touch
+        </h2>
+        <p className="mt-3 text-sm text-ink/50">
+          Interested in working together or just want to say hello?
+        </p>
+        <div className="mt-8">
+          <ContactForm />
         </div>
       </section>
     </>

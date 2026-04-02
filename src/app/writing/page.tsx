@@ -1,4 +1,14 @@
 import { getWriting } from "@/lib/mdx";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Writing — Tucker Glotzbach",
+  description: "Essays and articles on product management, fintech, and AI.",
+  openGraph: {
+    title: "Writing — Tucker Glotzbach",
+    description: "Essays and articles on product management, fintech, and AI.",
+  },
+};
 
 export default function WritingPage() {
   const articles = getWriting();

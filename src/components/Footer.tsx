@@ -14,7 +14,8 @@ export function Footer() {
             LinkedIn
           </a>
           <a
-            href="#"
+            href="/tucker-glotzbach-resume.pdf"
+            download
             className="transition-colors hover:text-ink"
           >
             Resume

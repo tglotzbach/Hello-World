@@ -5,11 +5,22 @@ interface ProjectCardProps {
   category: string;
   summary: string;
   slug: string;
+  gradient?: string;
 }
 
-export function ProjectCard({ title, category, summary, slug }: ProjectCardProps) {
+export function ProjectCard({ title, category, summary, slug, gradient }: ProjectCardProps) {
   return (
     <article className="group py-6">
+      {/* Hero image banner */}
+      <Link href={`/work/${slug}`} className="block">
+        <div
+          className={`mb-4 flex h-36 items-end rounded-sm bg-gradient-to-br ${gradient ?? "from-stone-200 to-stone-100"} p-5 transition-shadow group-hover:shadow-sm`}
+        >
+          <span className="font-serif text-lg font-semibold tracking-tight text-ink/70">
+            {title}
+          </span>
+        </div>
+      </Link>
       <p className="text-xs font-medium uppercase tracking-widest text-accent">
         {category}
       </p>

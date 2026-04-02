@@ -5,6 +5,15 @@ const config: Config = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./content/**/*.mdx",
+  ],
+  safelist: [
+    // Gradient classes used in project frontmatter
+    "from-stone-200", "to-stone-100",
+    "from-slate-200", "to-slate-100",
+    "from-amber-100", "to-orange-50",
+    "from-zinc-200", "to-neutral-100",
+    "from-rose-100",
   ],
   theme: {
     extend: {
